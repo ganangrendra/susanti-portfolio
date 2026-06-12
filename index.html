@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sarinah Susanti — Asset Value Specialist</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;1,400&family=Inter:wght@300;400;500&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.19.0/dist/tabler-icons.min.css">
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+body{font-family:'Inter',sans-serif;background:#f8f7f4;color:#1a1a1a;min-height:100vh;padding:2rem 1rem}
+.wrap{max-width:760px;margin:0 auto}
+.hero{background:#fff;border:0.5px solid #e0ddd6;border-radius:16px;padding:2rem 10rem 2rem 2rem;margin-bottom:1.25rem;position:relative;overflow:hidden}
+.hero-photo{position:absolute;right:1.75rem;top:1.75rem;width:96px;height:96px;border-radius:50%;object-fit:cover;object-position:center top;border:1px solid #e0ddd6}
+.eyebrow{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.18em;color:#888;text-transform:uppercase;margin-bottom:.6rem}
+.hero-name{font-family:'Playfair Display',serif;font-size:38px;font-weight:600;line-height:1.1;margin-bottom:.35rem;color:#0f0f0f}
+.hero-title{font-size:13px;color:#666;margin-bottom:1.25rem}
+.tagline{font-family:'Playfair Display',serif;font-size:16px;font-style:italic;color:#555;border-left:2px solid #ccc;padding-left:.875rem;line-height:1.55;margin-bottom:1.25rem}
+.badge{display:inline-block;font-size:10px;font-family:'DM Mono',monospace;padding:3px 9px;border-radius:6px;border:0.5px solid #ddd;color:#666;margin-right:4px;margin-top:3px}
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:1.25rem}
+.stat{background:#fff;border:0.5px solid #e0ddd6;border-radius:10px;padding:.75rem .875rem}
+.stat-n{font-family:'DM Mono',monospace;font-size:20px;font-weight:500;color:#0f0f0f;margin-bottom:2px}
+.stat-l{font-size:10px;color:#888;text-transform:uppercase;letter-spacing:.07em;line-height:1.3}
+.sec{margin-bottom:1.25rem}
+.sec-head{font-family:'DM Mono',monospace;font-size:10px;letter-spacing:.2em;text-transform:uppercase;color:#aaa;margin-bottom:.875rem;padding-bottom:.5rem;border-bottom:0.5px solid #e8e5df}
+.tl-item{display:flex;gap:.875rem;margin-bottom:.75rem;cursor:pointer}
+.tl-dot-col{display:flex;flex-direction:column;align-items:center;padding-top:5px}
+.tl-dot{width:8px;height:8px;border-radius:50%;background:#ccc;flex-shrink:0;transition:background .2s}
+.tl-line{width:1px;flex:1;background:#e8e5df;margin-top:3px}
+.tl-card{flex:1;background:#fff;border:0.5px solid #e0ddd6;border-radius:8px;padding:.625rem .875rem;transition:border-color .15s}
+.tl-item:hover .tl-card{border-color:#bbb}
+.tl-period{font-family:'DM Mono',monospace;font-size:10px;color:#aaa;margin-bottom:1px}
+.tl-role{font-size:13px;font-weight:500;color:#1a1a1a}
+.tl-company{font-size:12px;color:#888}
+.tl-detail{font-size:12px;color:#666;line-height:1.55;margin-top:6px;display:none}
+.tl-item.open .tl-detail{display:block}
+.tl-item.open .tl-dot{background:#333}
+.case-tabs{display:flex;gap:5px;margin-bottom:.875rem}
+.ctab{font-size:11px;padding:4px 11px;border-radius:6px;border:0.5px solid #ddd;background:#f4f2ee;cursor:pointer;color:#888;font-family:'DM Mono',monospace;transition:all .15s}
+.ctab.on{background:#fff;border-color:#999;color:#1a1a1a}
+.cpanel{display:none}
+.cpanel.on{display:block}
+.ccard{background:#fff;border:0.5px solid #e0ddd6;border-radius:14px;padding:1.25rem}
+.c-head{font-family:'Playfair Display',serif;font-size:15px;font-weight:600;color:#0f0f0f;margin-bottom:.4rem}
+.c-ctx{font-size:12px;color:#777;margin-bottom:.875rem;line-height:1.55}
+.flow{display:flex;align-items:center;gap:6px;margin-bottom:.875rem;flex-wrap:wrap}
+.fnode{text-align:center;flex:1;min-width:80px}
+.fval{font-family:'DM Mono',monospace;font-size:16px;font-weight:500;color:#1a1a1a}
+.fval.up{color:#2a7a4b}
+.farr{color:#ccc;flex-shrink:0;font-size:18px}
+.fsub{font-size:10px;color:#aaa;text-transform:uppercase;letter-spacing:.05em;margin-top:2px}
+.c-out{background:#f8f7f4;border:0.5px solid #e0ddd6;border-radius:8px;padding:.75rem;font-size:12px;color:#666;line-height:1.55}
+.out-lbl{font-family:'DM Mono',monospace;font-size:10px;text-transform:uppercase;letter-spacing:.1em;color:#aaa;margin-bottom:4px}
+.sk-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:9px}
+.sk-item{background:#fff;border:0.5px solid #e0ddd6;border-radius:8px;padding:.75rem}
+.sk-ico{font-size:18px;margin-bottom:5px;color:#999}
+.sk-name{font-size:12px;font-weight:500;color:#1a1a1a;margin-bottom:2px}
+.sk-desc{font-size:11px;color:#888;line-height:1.4}
+.contact-bar{background:#fff;border:0.5px solid #e0ddd6;border-radius:14px;padding:1.25rem 1.5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.875rem;margin-top:1.25rem}
+.contact-name{font-size:14px;font-weight:500;color:#1a1a1a;margin-bottom:4px}
+.contact-info{font-size:12px;color:#777;line-height:1.9}
+.cta-btn{font-size:12px;font-weight:500;padding:8px 20px;border-radius:8px;border:0.5px solid #ccc;background:#f8f7f4;cursor:pointer;color:#1a1a1a;text-decoration:none;display:inline-block}
+.cta-btn:hover{background:#eee}
+@media(max-width:600px){
+  .hero{padding:1.5rem 1.5rem 6rem 1.5rem}
+  .hero-photo{right:1.25rem;top:auto;bottom:1rem;width:72px;height:72px}
+  .stats{grid-template-columns:repeat(2,1fr)}
+  .hero-name{font-size:28px}
+}
+</style>
+</head>
+<body>
+<div class="wrap">
+
+<div class="hero">
+  <img class="hero-photo" src="data:image/jpeg;base64,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" alt="Sarinah Susanti">
+  <div class="eyebrow">Portfolio — Asset Value Specialist</div>
+  <div class="hero-name">Sarinah Susanti</div>
+  <div class="hero-title">Sales Manager &nbsp;·&nbsp; Asset Leverage Strategist &nbsp;·&nbsp; B2B Business Development</div>
+  <div class="tagline">"Engineering the Value Upon Every Sale."</div>
+  <div>
+    <span class="badge">Remote-ready · Nationwide</span>
+    <span class="badge">Property &amp; Asset Consulting</span>
+    <span class="badge">Vast Professional Network</span>
+    <span class="badge">20+ years in sales</span>
+  </div>
+</div>
+
+<div class="stats">
+  <div class="stat"><div class="stat-n" id="s1">0</div><div class="stat-l">Years in Sales</div></div>
+  <div class="stat"><div class="stat-n" id="s2">0%</div><div class="stat-l">Closing Rate</div></div>
+  <div class="stat"><div class="stat-n" id="s3">0x</div><div class="stat-l">Avg. Value Uplift</div></div>
+  <div class="stat"><div class="stat-n">Top 10</div><div class="stat-l">Producer · 4 months</div></div>
+</div>
+
+<div class="sec">
+  <div class="sec-head">Career journey</div>
+
+  <div class="tl-item open" onclick="this.classList.toggle('open')">
+    <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+    <div class="tl-card">
+      <div class="tl-period">2005 – 2008</div>
+      <div class="tl-role">Marketing Comm. &amp; Customer Relations</div>
+      <div class="tl-company">Indosat</div>
+      <div class="tl-detail">Marcomm support, Customer Service for the Indosat Poin Plus-plus loyalty program, and Blackberry Activation Support — early foundation in customer engagement, retention, and brand communication at national telco scale.</div>
+    </div>
+  </div>
+  <div class="tl-item" onclick="this.classList.toggle('open')">
+    <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+    <div class="tl-card">
+      <div class="tl-period">2008 – 2009</div>
+      <div class="tl-role">SPV HRD &amp; Admin</div>
+      <div class="tl-company">PT. Prima Fajar Cahaya Surya</div>
+      <div class="tl-detail">Supervised HR and administration operations. Built foundational skills in team coordination, process management, and organizational workflow design.</div>
+    </div>
+  </div>
+  <div class="tl-item" onclick="this.classList.toggle('open')">
+    <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+    <div class="tl-card">
+      <div class="tl-period">2009 – 2010</div>
+      <div class="tl-role">Director's Personal Assistant</div>
+      <div class="tl-company">PT. Biya Maestro Hardscape</div>
+      <div class="tl-detail">Strategic right-hand to the director — managing confidential affairs, stakeholder communications, and high-level coordination in the construction supply sector.</div>
+    </div>
+  </div>
+  <div class="tl-item" onclick="this.classList.toggle('open')">
+    <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+    <div class="tl-card">
+      <div class="tl-period">2011 – 2014</div>
+      <div class="tl-role">Founder &amp; Owner</div>
+      <div class="tl-company">Biyaclean — General Cleaning Services</div>
+      <div class="tl-detail">Built from zero a cleaning services company serving residential and commercial clients across the Jakarta area. End-to-end ownership: sales, client acquisition, operations, and team management.</div>
+    </div>
+  </div>
+  <div class="tl-item" onclick="this.classList.toggle('open')">
+    <div class="tl-dot-col"><div class="tl-dot"></div><div class="tl-line"></div></div>
+    <div class="tl-card">
+      <div class="tl-period">2017 – 2020</div>
+      <div class="tl-role">Founder &amp; Owner</div>
+      <div class="tl-company">Elsaga Metalwood — Interior Design &amp; Build</div>
+      <div class="tl-detail">Founded and led an interior design &amp; build company. Selected as official workshop partner for Dekoruma — one of Indonesia's leading home platforms — covering South Tangerang and South Jakarta (2019–2020). Managed B2B accounts, vendor relationships, and project execution.</div>
+    </div>
+  </div>
+  <div class="tl-item" onclick="this.classList.toggle('open')">
+    <div class="tl-dot-col"><div class="tl-dot"></div></div>
+    <div class="tl-card">
+      <div class="tl-period">2023 – present</div>
+      <div class="tl-role">Property Consultant &amp; Asset Value Specialist</div>
+      <div class="tl-company">Independent — Gading Pro BSD</div>
+      <div class="tl-detail">Consistently ranked Top 10 Best Producers (commission-based) and Top 5 KPR Closing across June, July, November, and December 2023. Specialises in unlocking hidden asset value — leveraging appraisal networks, banking relationships, and market positioning to engineer win-win closings.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-head">Deal anatomy — case studies</div>
+  <div class="case-tabs">
+    <div class="ctab on" onclick="sc(0,this)">Case 01</div>
+    <div class="ctab" onclick="sc(1,this)">Case 02</div>
+    <div class="ctab" onclick="sc(2,this)">Case 03</div>
+  </div>
+  <div class="cpanel on" id="c0">
+    <div class="ccard">
+      <div class="c-head">The 5-Year Stale Asset — Closed in 7 Days</div>
+      <div class="c-ctx">A property listing had sat on the market for over 5 years with no takers. Multiple previous consultants had failed to move it. Within one week of taking over the listing, a full closing was achieved.</div>
+      <div class="flow">
+        <div class="fnode"><div class="fval">5 yrs</div><div class="fsub">Stale on market</div></div>
+        <div class="farr">→</div>
+        <div class="fnode"><div class="fval up">7 days</div><div class="fsub">Time to closing</div></div>
+      </div>
+      <div class="c-out"><div class="out-lbl">What made the difference</div>Sharp buyer-profile analysis and targeted outreach through an extensive professional network — connecting the right asset to the right buyer that previous listings had systematically missed.</div>
+    </div>
+  </div>
+  <div class="cpanel" id="c1">
+    <div class="ccard">
+      <div class="c-head">Undervalued Listing → Engineered Win-Win Closing</div>
+      <div class="c-ctx">A property listed at Rp 450 jt sat unsold despite being significantly below market comps (Rp 600–800 jt). After light staging and a strategic appraisal approach, certified value was elevated — unlocking a financing ceiling that benefited both parties.</div>
+      <div class="flow">
+        <div class="fnode"><div class="fval">450 jt</div><div class="fsub">List price</div></div>
+        <div class="farr">→</div>
+        <div class="fnode"><div class="fval">950 jt</div><div class="fsub">Appraised value</div></div>
+        <div class="farr">→</div>
+        <div class="fnode"><div class="fval up">750 jt</div><div class="fsub">KPR ceiling</div></div>
+      </div>
+      <div class="c-out"><div class="out-lbl">Outcome</div>Seller closed at their true expected price. Buyer received a KPR ceiling above the purchase price — effectively a zero down-payment acquisition.</div>
+    </div>
+  </div>
+  <div class="cpanel" id="c2">
+    <div class="ccard">
+      <div class="c-head">Distressed Exit → Clean Closing with Hidden Surplus</div>
+      <div class="c-ctx">An owner required urgent sale due to an imminent change of residency status, with no WNI heirs. Property listed at Rp 400 jt — urgency-priced and overlooked. A structured appraisal and financing scenario was engineered to close cleanly for all parties.</div>
+      <div class="flow">
+        <div class="fnode"><div class="fval">400 jt</div><div class="fsub">List price</div></div>
+        <div class="farr">→</div>
+        <div class="fnode"><div class="fval">700 jt</div><div class="fsub">Appraised value</div></div>
+        <div class="farr">→</div>
+        <div class="fnode"><div class="fval up">600 jt</div><div class="fsub">KPR ceiling</div></div>
+      </div>
+      <div class="c-out"><div class="out-lbl">Outcome</div>Seller completed a fast, legally clean exit at an acceptable price. Buyer acquired at marginally above-list with a KPR ceiling exceeding purchase — effectively no down payment required.</div>
+    </div>
+  </div>
+</div>
+
+<div class="sec">
+  <div class="sec-head">Core competencies</div>
+  <div class="sk-grid">
+    <div class="sk-item"><div class="sk-ico"><i class="ti ti-chart-line"></i></div><div class="sk-name">Asset value leverage</div><div class="sk-desc">Unlocks hidden value in underperforming assets through appraisal strategy and market positioning.</div></div>
+    <div class="sk-item"><div class="sk-ico"><i class="ti ti-network"></i></div><div class="sk-name">Vast professional network</div><div class="sk-desc">Extensive connections across banking, appraisers, developers, investors, and industry partners — built over 20 years.</div></div>
+    <div class="sk-item"><div class="sk-ico"><i class="ti ti-users"></i></div><div class="sk-name">B2B sales leadership</div><div class="sk-desc">Proven track record managing accounts, closing B2B deals, and building long-term commercial relationships.</div></div>
+    <div class="sk-item"><div class="sk-ico"><i class="ti ti-bulb"></i></div><div class="sk-name">Entrepreneurial instinct</div><div class="sk-desc">2x founder. Built businesses from zero. Understands both the operator and investor sides of any deal.</div></div>
+    <div class="sk-item"><div class="sk-ico"><i class="ti ti-message-2"></i></div><div class="sk-name">Persuasive communication</div><div class="sk-desc">Natural ability to build trust, read a room, and close — whether B2C or boardroom-level B2B.</div></div>
+    <div class="sk-item"><div class="sk-ico"><i class="ti ti-package"></i></div><div class="sk-name">Multi-sector sales</div><div class="sk-desc">Sold across telco, cleaning, interior design, and property — versatile across industries and buyer profiles.</div></div>
+  </div>
+</div>
+
+<div class="contact-bar">
+  <div>
+    <div class="contact-name">Sarinah Susanti</div>
+    <div class="contact-info">
+      <i class="ti ti-device-mobile" style="font-size:12px;vertical-align:-1px;margin-right:4px"></i>0811 855 958<br>
+      <i class="ti ti-mail" style="font-size:12px;vertical-align:-1px;margin-right:4px"></i>susantigpbsd@gmail.com<br>
+      <i class="ti ti-world" style="font-size:12px;vertical-align:-1px;margin-right:4px"></i>Remote-ready · Open to nationwide engagements
+    </div>
+  </div>
+  <a class="cta-btn" href="mailto:susantigpbsd@gmail.com">Get in touch →</a>
+</div>
+
+</div>
+<script>
+function sc(i,tab){
+  document.querySelectorAll('.cpanel').forEach(function(p,j){p.classList.toggle('on',j===i)});
+  document.querySelectorAll('.ctab').forEach(function(t,j){t.classList.toggle('on',j===i)});
+}
+var counters=[{id:'s1',end:20,dec:0,suf:'+'},{id:'s2',end:97,dec:0,suf:'%'},{id:'s3',end:2.1,dec:1,suf:'x'}];
+counters.forEach(function(c){
+  var el=document.getElementById(c.id);
+  if(!el)return;
+  var v=0,step=c.end/45;
+  var t=setInterval(function(){
+    v+=step;if(v>=c.end){v=c.end;clearInterval(t);}
+    el.textContent=(c.dec?v.toFixed(c.dec):Math.round(v))+c.suf;
+  },28);
+});
+</script>
+</body>
+</html>
